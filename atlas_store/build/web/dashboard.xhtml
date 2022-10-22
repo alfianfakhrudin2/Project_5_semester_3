@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Dashboard | Atlas</title>
+        <!--ALERTS-->
+        <link href="Public/Assets/Css/extra.css" rel="stylesheet" type="text/css"/>
+        <!--ICON-->     
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+        <!--NAVBAR-->
+        <link href="Public/Assets/Css/side_nav_bar.css" rel="stylesheet" type="text/css"/>
+        <!--MAIN CSS-->
+        <link href="Public/Assets/Css/main.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <ui:include src="Public/side_nav_bar.xhtml"/>
+        <div class="alert" style="margin: 70px 450px">
+            
+            <span class="closebtn">&times;</span>  
+            <strong>Successfully Signed In!</strong> Happy work...
+        </div>
+       <div class="text-center my-5" style="margin-left: 500px; margin-bottom: -700px; margin-top: 0px">
+              <img src="img/logocuy.svg" alt="logo" width="200" height="200"/>
+	</div>
+        <div class="row" style="margin-left: 450px">
+            <div class="col-12 col-sm-12 col-m-12" >
+                <div class="col-4 col-sm-12 col-m-12 menu">
+                    <a href="admin.xhtml">
+                        <i class='bx bxs-user-circle'></i> <br/>
+                        <span>Admin</span>
+                    </a>
+                </div>
+                <div class="col-4 col-sm-12 col-m-12 menu">
+                    <a href="employe.xhtml">
+                        <i class='bx bxs-user-circle'></i> <br/>
+                        <span>Employee</span>
+                    </a>
+                </div>
+                <div class="col-4 col-sm-12 col-m-12 menu">
+                    <a href="invetory.xhtml">
+                        <i class='bx bxs-folder-plus'></i><br/>
+                        <span>Item</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 450px;">
+            <div class="col-12 col-sm-12 col-m-12" style="margin-top: -280px">   
+                
+            </div>
+        </div>
+        <script src="Public/Assets/Js/alerta.js" type="text/javascript"></script>
+    </h:body>
+</html>

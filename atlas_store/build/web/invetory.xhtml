@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <head>
+        <title>ItemPage | Atlas</title>
+        <!--NAVBAR-->
+        <link href="Public/Assets/Css/side_nav_bar.css" rel="stylesheet" type="text/css"/>
+        <!--BOXICONS-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+        <!--MAIN-->
+        <link href="Public/Assets/Css/main.css" rel="stylesheet" type="text/css"/>
+        <!--EXTRA-->
+        <link href="Public/Assets/Css/extra.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <ui:include src="Public/side_nav_bar.xhtml"/>
+<!--PAGE TITLE SECTION-->
+            <section>
+                <div class="row" style="margin-left: 65px; margin-top: 50px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title">
+                            <span style="font-size:30px; color: black; margin-left: -980px">Item Page</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--MANIPULATION DATA SECTION-->
+            <section>
+                <h:form prependId="false">
+                <div class="row" style="margin-left: 65px; margin-top: -30px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title" style="height: 21.5rem">                            
+                            <!--SEARCH-->    
+                            <h:form>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-m-12">
+                                        <h:outputLabel style="margin-left: -1008px; margin-top: 20px;">Search ID</h:outputLabel><br/>
+                                        <h:inputText a:placeholder="Search by ID" style="width: 200px; height: 20px; margin-left: -790px" required="true" class="form-input" value="#{tblBarang.barangId}"/>
+                                        <h:commandButton class="search-button" value="Search" action="#{tblBarang.getbyid()}"/><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-6 col-m-12">                                       
+                                        <!--NAME-->
+                                        <h:outputLabel style="margin-left: -120px; margin-top: 20px;">Item Name</h:outputLabel><br/>
+                                        <h:inputText a:placeholder="Supplier Name" style="width: 200px; height: 20px; margin-left: -10px; padding-right: -50px" class="form-input-category" value="#{tblBarang.barangName}"/><br/><br/>
+                                        <!--STOCK-->
+                                        <h:outputLabel style="margin-left: -157px; margin-top: -2420px;">Stock</h:outputLabel><br/>
+                                        <h:inputText a:placeholder="Supplier Name" style="width: 200px; height: 20px; margin-left: -10px; padding-right: -50px" class="form-input-category" value="#{tblBarang.stock}"/><br/><br/>
+                                        <!--PRICE-->
+                                        <h:outputLabel style="margin-left: -157px; margin-top: -2420px;">Price</h:outputLabel><br/>
+                                        <h:inputText a:placeholder="Supplier Name" style="width: 200px; height: 20px; margin-left: -10px; padding-right: -50px" class="form-input-category" value="#{tblBarang.price}"/><br/><br/>
+                                    </div>
+                                    <div class="col-4 col-sm-6 col-m-12" style="margin-top: 35px; margin-left: 180px">                                       
+                                        <!--BUTTON LIST-->
+                                        <h:commandButton class="newList-button" style="margin-left: -790px" onclick="alert('Data successfully Added')" value="+ New List" action="#{tblBarang.addInven()}"/><br/>                                        
+                                        <!--DELETE BUTTON-->
+                                        <h:commandButton style="margin-left: -789px; margin-top: 9px;" class="delete-button" onclick="alert('Data successfully Deleted')" value="Delete" action="#{tblBarang.delete()}"/>
+                                        <!--BUTTON UPDATE-->
+                                        <h:commandButton style="margin-left: -147px; margin-top: 9px;" class="update-button" onclick="alert('Data successfully Updated')" value="Update" action="#{tblBarang.update()}"/>
+                                    </div>
+                                </div>
+                        </h:form>
+                        </div>
+                    </div>
+                </div>
+                    
+<!--TABLE SECTION-->            
+                <div class="row" style="margin-left: 65px; margin-top: -20px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title" style="height: 18rem">
+                            <h:dataTable class="table" border="1" value="#{tblBarang.getallrecords()}" var="inv">
+                                    <h:column>
+                                        <f:facet name="header">ID Barang</f:facet>
+                                            #{inv.barangId}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Nama Barang</f:facet>
+                                            #{inv.barangName}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Stock</f:facet>
+                                            #{inv.stock}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Price</f:facet>
+                                            #{inv.price}
+                                    </h:column>
+                            </h:dataTable>                            
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </section>
+    </body>
+</html>

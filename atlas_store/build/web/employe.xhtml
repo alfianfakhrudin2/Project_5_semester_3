@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>employePage | Atlas</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+        <link href="Public/Assets/Css/side_nav_bar.css" rel="stylesheet" type="text/css"/>
+        <link href="Public/Assets/Css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="Public/Assets/Css/extra.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <ui:include src="Public/side_nav_bar.xhtml"/>
+        
+<!--PAGE TITLE SECTION-->
+            <section>
+                <div class="row" style="margin-left: 65px; margin-top: 50px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title">
+                            <span style="font-size:30px; color: black; margin-left: -980px">Employee Page</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--MANIPULATION DATA SECTION-->
+            <section>
+                <h:form prependId="false">
+                <div class="row" style="margin-left: 65px; margin-top: -30px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title" style="height: 17rem">                            
+                            <!--SEARCH-->    
+                            <h:form>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-m-12">
+                                        <h:outputLabel style="margin-left: -1008px; margin-top: 20px;">Search ID</h:outputLabel><br/>
+                                        <h:inputText a:placeholder="Search by ID" style="width: 200px; height: 20px; margin-left: -790px" class="form-input" value="#{tblEmploye.employeId}"/>
+                                        <h:commandButton class="search-button" value="Search" action="#{tblEmploye.getbyid()}"/><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-6 col-m-12">                                       
+                                        <!--NAME-->
+                                        <h:outputLabel style="margin-left: -120px; margin-top: 20px;">Supplier Name</h:outputLabel><br/>
+                                        <h:inputText a:placeholder="Supplier Name" style="width: 200px; height: 20px; margin-left: -10px; padding-right: -50px" class="form-input-category" value="#{tblEmploye.employeName}"/><br/><br/>
+                                        <!--Address-->
+                                        <h:outputLabel style="margin-left: -157px; margin-top: -2420px;">Address</h:outputLabel><br/>
+                                        <h:inputTextarea rows="5" a:placeholder="Address" style=" font-size: 16px; border: 2px solid grey; width: 500px; height: 51px; margin-left: 101px; padding-right: -50px" class="form-input-category" value="#{tblEmploye.employeAddress}"/><br/>
+                                    </div>
+                                    <div class="col-4 col-sm-6 col-m-12" style="margin-top: 35px; margin-left: 170px">                                       
+                                        <!--BUTTON LIST-->
+                                        <h:commandButton class="newList-button" style="margin-left: -790px" onclick="alert('Data successfully Added')" value="+ New List" action="#{tblEmploye.addEmploye()}"/><br/>                                        
+                                        <!--DELETE BUTTON-->
+                                        <h:commandButton style="margin-left: -789px; margin-top: 9px;" onclick="alert('Data successfully Deleted')" class="delete-button" value="Delete" action="#{tblEmploye.delete()}"/>
+                                        <!--BUTTON UPDATE-->
+                                        <h:commandButton style="margin-left: -147px; margin-top: 9px;" onclick="alert('Data successfully updated')" class="update-button" value="Update" action="#{tblEmploye.update()}"/>
+                                    </div>
+                                </div>
+                        </h:form>
+                        </div>
+                    </div>
+                </div>
+                    
+<!--TABLE SECTION-->            
+                <div class="row" style="margin-left: 65px; margin-top: -20px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title" style="height: 18rem">
+                            <h:dataTable class="table" border="1" value="#{tblEmploye.getallrecords()}" var="empy">
+                                    <h:column>
+                                        <f:facet name="header">Supplier ID</f:facet>
+                                            #{empy.employeId}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Name</f:facet>
+                                            #{empy.employeName}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Address</f:facet>
+                                            #{empy.employeAddress}
+                                    </h:column>
+                            </h:dataTable>                            
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </section>
+    </body>
+</html>

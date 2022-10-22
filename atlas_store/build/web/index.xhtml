@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>LoginPage | Atlas</title>
+        <!--FAVICON-->
+        <link rel="icon" type="img/x-icon" href="img/tem.svg"/>
+        <!--LOGIN CSS-->
+        <link href="Public/Assets/Css/Login.css" rel="stylesheet" type="text/css"/>
+        <!--BOOSTRAP ICONS CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+        <!--BOOSTRAP CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
+        <!--LINK BOOSTRAP-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet"/>
+    </h:head>
+    <h:body class="pp">
+        <section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-sm-center h-100">
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+                <div class="text-center my-5">
+                    <img src="img/logocuy.svg" alt="logo" width="200" height="200"/>
+		</div>
+                <div class="col-12 mb-3">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error!</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="card shadow-lg" style="margin-top: -100px">
+                    <div class="card-body p-5">
+                        <div class="text-center my-5">
+                            <img src="img/admin.png" alt="logo" width="80" height="80"/>
+                        </div>
+                        <p class="card-title fw-bold mb-4 text-center judul" style="margin-top: -50px ">Login</p>
+                        <h:form prependId="false">
+                            <div class="mb-3 kolom">
+                                <b:inputText placeholder="username" type="text" required="true" class="inpt1" name="username" value="#{tblUser.username}" required-message="Please, fill the username!" style="background-color: whitesmoke; font-family: 'Handlee', cursive; opacity: 0.9;"></b:inputText>
+                            </div>
+                            <div class="mb-3 kolom">
+                                <b:inputText placeholder="password" type="password" required="true" class="inpt1" name="password" value="#{tblUser.password}" required-message="Please, fill the password!" style="background-color: whitesmoke; font-family: 'Handlee', cursive; opacity: 0.9;"></b:inputText>
+                            </div>
+                            <div class="d-flex align-items-center d-grid">
+                                <b:commandButton type="submit" class="btn design btn-lg btn-block btn-rounded" action="#{tblUser.validasiLogin()}" value="Sign In" size="lg" style="background-color: rgba(91,125,189,1); color: white; opacity: 0.8;"/>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+                <div class="text-center mt-5 text-muted">
+                    <p style="color: ivory">&copy; Atlas Stationery Store 2022.</p>
+                </div>
+            </div>
+	</div>
+    </div>
+</section>
+    </h:body>
+</html>

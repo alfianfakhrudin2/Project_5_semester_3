@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+    @import '~mdb-ui-kit/css/mdb.min.css';
+    .pp{
+    margin: 0;
+    padding: 0;
+    background-color: #8A75AD;
+    height: 100vh;
+    overflow: hidden;
+    }
+    
+    .judul{
+    font-size: 3rem;
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+    }
+    
+    form .kolom{
+    position: relative;
+    margin: 30px 0;
+    }
+    .kolom input{
+      width: 100%;
+      padding: 0 5px;
+      height: 50px;
+      font-size: 20px;
+      border: 10px;
+      background: none;
+    }
+    .kolom label{
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      color: #adadad;
+      transform: translateY(-50%);
+      font-size: 16px;
+      pointer-events: none;
+      transition: .5s;
+    }
+    .kolom span::before{
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #2691d9;
+      transition: 0.5s;
+    }
+    .kolom input:focus ~ label,
+    .kolom input:valid ~ label{
+      top: -5px;
+      color: #2691d9;
+    }
+    .kolominput:focus ~ span::before,
+    .kolominput:valid ~ span::before{
+      width: 100%;
+    }
+    .btn {
+    flex: 1 1 auto;
+    margin: 0px 50px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 10px 20px #eee;
+/*    border-radius: none;*/
+    }
+    .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    }

@@ -1,0 +1,144 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 9, 2022, 12:18:31 PM
+    Author     : Lattae
+*/
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+.card-title{
+    border-radius: 10px;
+    max-width: 80rem;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: -5px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    text-align: center;
+/*    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.form-input-area{
+    margin-left: 100px;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border-color: #DCDCDC;
+}
+
+.form-input{
+    margin-left: -900px;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border-color: #DCDCDC;
+}
+
+.form-input-category{
+    margin-left: -790px;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border-color: #DCDCDC;
+}
+
+.search-button{
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: #628E90;
+    font-size: 15px;
+    border-color: #7F7C82;
+    margin-left: 10px;
+}
+.update-button{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #0292b7;
+    color: white;
+    font-size: 15px;
+    border-color: #0292b7;
+    margin-left: px;
+}
+
+.delete-button{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #FF1616;
+    color: white;
+    font-size: 15px;
+    border-color: #FF1616;
+    margin-left: px;
+}
+
+.newList-button{
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #51557E;
+    color: white;
+    font-size: 15px;
+    border-color: #51557E;
+    margin-left: 10px;
+    padding: 5px;
+    width: 180px;
+}
+
+.table {
+  font-family: 'Playfair Display', serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+.table td,  .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table tr:nth-child(even){background-color: #dfecec;}
+
+.table tr:hover {background-color: #cfe2e2;}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #8BBCCC;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: black;
+}
+
+/*ALERTS*/
+.alert {
+  padding: 20px;
+  background-color: #AFEEEE;
+  color: cadetblue;
+  opacity: 0.9;
+  transition: opacity 0.6s;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+
+.closebtn {
+  margin-left: 15px;
+  color: cadetblue;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

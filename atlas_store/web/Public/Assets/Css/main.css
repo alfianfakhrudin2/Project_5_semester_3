@@ -1,0 +1,193 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 13, 2022, 10:50:48 PM
+    Author     : Alfian Fakhrudin
+*/
+.menu{
+    border-radius: 10px;
+    max-width: 10rem;
+    height: 100px;
+    margin: auto;
+    margin-top: 270px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding-top: 45px;
+    padding-bottom: -5px;
+    text-align: center;
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 85%;
+    font-size: 20px;
+}
+.menu a{
+   color: black; 
+}
+
+.menu a:hover{
+    color: #8A75AD;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 10px;
+}
+
+/* For Mobile Phones: */
+
+[class*="col-"] {
+    width: 100%;
+    float: left;
+}
+
+@media only screen and (max-width: 1370px) {
+    /* For Tablets : */
+    .col-sm-6 {
+        width: 50%;
+        text-align: center;
+    }
+    .col-sm-12 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 912px) {
+    /* For Tablets: */
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
+    .text-m-center{
+        text-align: center;
+    }
+    .margin-m{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .margin-button{
+        margin:auto;
+    }
+    .about-us {
+        padding-left: -350px; 
+        padding-right: -350px;
+    }
+}
+
+@media only screen and (min-width:937px) {
+    /* For Desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }    
+
+    .margin-m{
+        margin: auto;
+    }
+    .margin-button{
+        margin-right: 5px;
+        margin-right: 5px;
+    }
+    .text-right {
+        text-align: right;
+    }
+    
+    .text-left {
+        text-align: left;
+    }
+    .about-us {
+        padding-left: 250px; 
+        padding-right: 220px;
+    }
+}

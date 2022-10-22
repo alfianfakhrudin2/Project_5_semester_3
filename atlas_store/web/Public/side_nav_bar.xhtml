@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>SideNavBar</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+        <link href="Assets/Css/side_nav_bar.css" rel="stylesheet" type="text/css"/>
+        <link href="Assets/Css/main.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+<!--HEADER-->
+        <div class="header">
+            <h:form>
+            <a href="dashboard.xhtml">
+                <span style="font-size:30px; color: black">Dashboard</span>
+            </a>
+                <h:commandLink action="/index.xhtml" style="margin-left: 1250px; font-style: none; font-size: 21px; color: #2B4865; "><b>Sign Out</b></h:commandLink>
+            </h:form>
+        </div>
+
+<!--SIDEBAR-->
+<div class="row">
+    <div class="col-1 col-sm-6 col-m-1">
+        <div class="sidebar" style="margin-top: 74px">
+            <a href="admin.xhtml">
+        	<i class='bx bxs-user-circle'></i> 
+                <span>Admin</span>
+            </a>
+            <a href="employe.xhtml">
+        	<i class='bx bxs-group' ></i>
+                <span>Employee</span>
+            </a>
+            <a href="invetory.xhtml">
+        	<i class='bx bxs-folder-plus'></i>
+                <span>Item</span>
+            </a>
+        </div>
+    </div>
+</div>
+    </h:body>
+</html>

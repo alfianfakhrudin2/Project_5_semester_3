@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Admin</title>
+         <!--NAVBAR-->
+         <link href="Public/Assets/Css/side_nav_bar.css" rel="stylesheet" type="text/css"/>
+        <!--BOXICONS-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+        <!--MAIN-->
+        <link href="Public/Assets/Css/main.css" rel="stylesheet" type="text/css"/>
+        <!--EXTRA-->
+        <link href="Public/Assets/Css/extra.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        
+<!--SIDE-NAVBAR-->
+<ui:include src="Public/side_nav_bar.xhtml"/>
+        
+<!--PAGE TITLE SECTION-->
+            <section>
+                <div class="row" style="margin-left: 65px; margin-top: 50px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title">
+                            <span style="font-size:30px; color: black; margin-left: -1005px">Admin Page</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--MANIPULATION DATA SECTION-->
+            <section>
+                <h:form prependId="false">
+                <div class="row" style="margin-left: 65px; margin-top: -30px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title" style="height: 12rem;">                            
+                            <!--SEARCH-->    
+                            <h:form>
+                            <h:outputLabel style="margin-left: -1110px; margin-top: 20px;">Search</h:outputLabel><br/>
+                            <h:inputText required="true" a:placeholder="Search by ID" class="form-input" value="#{tblUser.id}" />&nbsp;                 
+                            <h:commandButton class="search-button" value="Search" action="#{tblUser.getbyid()}"/><br/><br/>
+                            <!--USERNAME--> 
+                            <h:outputLabel style="margin-left: -1090px; margin-top: 20px;">Username</h:outputLabel><br/>
+                            <h:inputText a:placeholder="Username" style="margin-left: -1040pxpx;" class="form-input" value="#{tblUser.username}"/>&nbsp;  
+                            <!--HIDDEN PASSWORD INPUT-->
+                            <h:inputText p:type="hidden" style="margin-left: -1350px" class="form-input" value="#{tblUser.password}"/>&nbsp; 
+                            <h:commandButton class="update-button" onclick="alert('Data successfully updated')" value="Update" action="#{tblUser.update()}"/>
+                        </h:form>
+                        </div>
+                    </div>
+                </div>            
+<!--TABLE SECTION-->            
+                <div class="row" style="margin-left: 65px; margin-top: -20px">
+                    <div class="col-12 col-sm-12 col-m-12" >
+                        <div class="card-title" style="height: 18rem">
+                            
+                            <h:dataTable class="table" border="1" value="#{tblUser.getallrecords()}" var="rehangwangsaf">
+                                    <h:column>
+                                        <f:facet name="header">Admin ID</f:facet>
+                                            #{rehangwangsaf.id}
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Username</f:facet>
+                                            #{rehangwangsaf.username}
+                                    </h:column>
+                            </h:dataTable>                            
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </section>
+    </h:body>
+</html>

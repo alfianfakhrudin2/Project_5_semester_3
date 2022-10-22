@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 13, 2022 9:45:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojojo.TblBarang" table="tbl_barang" catalog="atlas_store" optimistic-lock="version">
+        <id name="barangId" type="java.lang.Integer">
+            <column name="barang_id" />
+            <generator class="identity" />
+        </id>
+        <property name="barangName" type="string">
+            <column name="barang_name" length="100" not-null="true" />
+        </property>
+        <property name="stock" type="int">
+            <column name="stock" not-null="true" />
+        </property>
+        <property name="price" type="int">
+            <column name="price" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

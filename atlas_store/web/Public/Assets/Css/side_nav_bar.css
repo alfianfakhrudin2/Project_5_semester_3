@@ -1,0 +1,119 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 13, 2022, 10:41:09 PM
+    Author     : Alfian Fakhrudin
+*/
+*{
+    margin: 0;
+    padding : 0;
+    text-decoration: none;
+}
+body{
+    background-color: #8A75AD;
+}
+.sidebar{
+    position: fixed;
+    width: 240 px;
+    left: 0;
+    height: 100%;
+    background: white;
+    transition: LL .5S ease;
+}
+.sidebar header{
+    font-size: 28 px;
+    color: white;
+    line-height: 70px;
+    background: #1b1b1b;
+    text-transform: uppercase;
+    padding-left: 20px;
+    border-bottom: 1px solid black;
+}
+.sidebar a{
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: black;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px splid black;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-left: 5px, solid, transparent;
+    transition: all .5s ease;
+}
+.sidebar a i{
+    font-size: 23px;
+    margin-right: 16px;     
+}
+.sidebar a span{
+    Letter-spacing: 1px;       
+}
+a:hover
+.sidebar a.active, .sidebar a:hover{
+    border-left: 5px solid black;
+    color: black;           
+}
+.header{
+    background-color: white;
+    color: black; 
+    width:100%; 
+    padding:20px;
+    width: 100%;
+    position: fixed;
+}	
+.logout{
+    color: black;
+    font-size: 20px;
+}
+.logout:hover{
+    color: #8A75AD;
+}
+       
+@media (max-width: 1700px){
+.sidebar{
+    height: 100%;
+    width: 70px;
+    left: 0;
+    margin: 0;
+}
+.sidebar header{
+    text-align: justify;
+    font-size: 23px;
+    padding-left: 25px;
+    height: 60px;
+    line-height: 60px;
+    transition: all .5s ease;
+}
+.sidebar span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;         
+}
+.sidebar a{
+    heigth: 60px;               
+}
+.sidebar a i{
+    margin-left: -10px;
+}
+.sidebar header:hover{
+    border-left: 5px solid black;
+    color: black;
+    width: 200px;
+    background: inherit;
+    transition: all .5s ease;
+}
+.sidebar a:hover{
+    width: 200px;
+    background: inherit;
+}
+.sidebar header:hover span, .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+                
+    }
+}
